@@ -36,6 +36,7 @@ target_include_directories(libplist PUBLIC
 )
 target_compile_definitions(libplist PRIVATE ${DEFINITIONS})
 set_target_properties(libplist PROPERTIES OUTPUT_NAME plist-2.0)
+set_target_properties(libplist PROPERTIES POSITION_INDEPENDENT_CODE ON)
 if(UNIX AND NOT APPLE)
     target_link_libraries(libplist PRIVATE m)
 endif()
